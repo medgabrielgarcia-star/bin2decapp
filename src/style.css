@@ -1,5 +1,73 @@
 *{
-  padding: 0;
   margin: 0;
-  
+  padding: 0;
+  box-sizing: border-box
+}
+
+body{
+  background-color: gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container-app{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 20px;
+  width: 650px;
+  height: auto;
+  padding: 60px;
+  border-radius: 10px;
+  background-color: #ffba;
+  box-shadow: 0 0 15px #faa9;
+}
+
+.app-title{
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 3.5rem;
+}
+
+.app-form{
+  border: 1px solid black;
+  width: 90%;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px;
+  gap: 15px;
+}
+
+.app-label{
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.app-input{
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.app-btn{
+  border: none;
+  padding: 12px;
+  width: 200px;
+  border-radius: 10px;
+  outline: 1px solid #faa9;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.app-output{
+  border: 1px solid black;
+  width: 100%;
+  height: 50px;
 }
