@@ -17,5 +17,8 @@
     }
   },
   "packageManager": "pnpm@12.14.0",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "servor": "^4.0.2"
+  }
 }
