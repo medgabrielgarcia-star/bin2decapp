@@ -1,15 +1,25 @@
-const form = document.querySelector(".app-form")
-const numBin = document.querySelector("#binarie-entry")
-const calcbtn = document.querySelector(".app-btn");
-const resultado = document.querySelector(".app-output");
+const form = document.querySelector(".app-form");
+const numBin = document.querySelector("#binarie-entry");
+const calcbtn = document.querySelector("#calc-btn");
+const resetbtn = document.querySelector("#reset-btn");
+const resultado = document.querySelector(".output-text");;
 
-form.addEventListener("click", function(event)){
+form.addEventListener("submit", function(event){
+  event.preventDefault();
   const binario = numBin.value;
-  let resultado = changeBin(binario);
-  resultado.innerHTML = `Tu resultado es: ${resultado}`
+  let binNumero = changeBin(binario);
+  resultado.textContent = binNumero;
+});
+
+resetbtn.addEventListener("click", limpiarResultado)
+
+function limpiarResultado(){
+  resultado.textContent = "";
+  numBin.value = "";
 }
 
-function changeBin(string){
+
+/*function changeBin(string){
   let str = string.split("");
   let reverse = str.reverse();
   let bina = reverse.join("");
@@ -21,4 +31,16 @@ function changeBin(string){
     result += calculo;
   }
   return result
+}*/
+
+
+function changeBin(string){
+let result = 0;
+for(let i = string.length - 1; i >= 0; i--){
+let bit = parseInt(string[i]);
+let exponent = (string.length -1) - i;
+let calculo = bit * (2**exponent);
+result += calculo;
+}
+return result;
 }

@@ -12,9 +12,15 @@
     <h1 class="app-title">Bin2Dec</h1>
     <form class="app-form">
       <label for="binarie-entry" class="app-label">Ingresa un numero binario:</label>
-      <input id="binarie-entry" class="app-input" type="text" maxlength="8" pattern="[01]*" placeholder="Ej: 01010110">
-      <button type="button" class="app-btn">Calcular</button>
-      <output class="app-output"></output>
+      <input id="binarie-entry" class="app-input" type="text" maxlength="8" pattern="[0-1]*" placeholder="Ej: 01010110" required>
+      <div class="btns">
+        <button type="submit" class="app-btn" id="calc-btn">Calcular</button>
+        <button type="button" class="app-btn" id="reset-btn">Reset</button>
+      </div>
+      <output class="app-output">
+        <p>Tu resultado es:</p>
+        <p class="output-text"></p>
+      </output> 
     </form>
   </main>
 </body>
