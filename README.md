@@ -4,6 +4,8 @@
 
 A simple web application that converts binary numbers into decimal numbers. This project was built as part of my JavaScript learning journey, focusing on DOM manipulation, input validation, and event handling.
 
+live demo - https://medgabrielgarcia-star.github.io/bin2decapp/
+
 ## Features
 
 - Convert binary numbers into decimal numbers.
